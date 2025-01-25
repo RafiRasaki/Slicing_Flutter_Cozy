@@ -7,6 +7,7 @@ Color krem = const Color(0xffFF9376);
 Color red = const Color(0xffEB70A5);
 Color black =const Color(0xff000000);
 Color grey = const Color(0xff82868E);
+Color greysoft = const Color(0xffF6F7F8);
 
 TextStyle blacktextstyle = GoogleFonts.poppins(
   color: black,
