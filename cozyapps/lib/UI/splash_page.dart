@@ -79,9 +79,8 @@ class SplashPage extends StatelessWidget {
               width: 200,
               margin: const EdgeInsets.only(left: 30),
               onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                Navigator.pushNamedAndRemoveUntil(
+                  context, '/main', (route) => false
                 );
               }
             ),

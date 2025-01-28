@@ -46,6 +46,7 @@ class CustomPopulerCities extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Container(
+                          padding: EdgeInsets.all(10),
                           width: 50,
                           height: 30,
                           decoration: BoxDecoration(
