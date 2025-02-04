@@ -1,3 +1,4 @@
+import 'package:cozyapps/UI/detail.page.dart';
 import 'package:flutter/material.dart';
 
 import '../shared/theme.dart';
@@ -17,7 +18,10 @@ class CustomPopulerCities extends StatelessWidget{
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('Berhasil');
+        Navigator.push(
+          context, MaterialPageRoute(
+            builder: (context) => DetailPage() ),
+          );
       },
       child: Container(
               width: 120,
@@ -62,7 +66,7 @@ class CustomPopulerCities extends StatelessWidget{
                             ),
                           ),
                           child: Align(
-                            alignment: Alignment.topRight,
+                            alignment: Alignment.topCenter,
                           ),
                         ),
                       ],

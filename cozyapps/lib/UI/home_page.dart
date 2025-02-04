@@ -1,6 +1,7 @@
 import 'package:cozyapps/shared/theme.dart';
 import 'package:cozyapps/widget/custom_popular_cities.dart';
 import 'package:cozyapps/widget/custom_recomm.dart';
+import 'package:cozyapps/widget/custom_tips.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
      body: ListView(
       children: [
         Container(
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             left: 24,
             top: 24
           ),
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
         const SizedBox(height: 30),
 
         Container(
-          margin: EdgeInsets.only(left: 24),
+          margin: const EdgeInsets.only(left: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -70,7 +71,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                child: Row(
+                child: const Row(
                   children: [
                    CustomPopulerCities(
                     judul: 'Jakarta', 
@@ -114,73 +115,101 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(
-                  top: 30
-
-                  ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Recommended Space',
-                      style: blacktextstyle.copyWith(
-                        fontSize: 16,
-                        fontWeight: regular
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 16),
-                child: Column(
-                  children: [
-                    CustomRecommendedSpace(
-                      imgurl: 'assets/kure.png', 
-                      caption: 'Kuretakeso Hott', 
-                      price: 52, 
-                      permont: '/ Mont',
-                      loc: 'Bandung, Germany', 
-                      rating: '4/5',
-                    ),
-
-                  const SizedBox(height: 30),
-
-                    CustomRecommendedSpace(
-                      imgurl: 'assets/image 15.png', 
-                      caption: 'Roemah Nenek', 
-                      price: 11, 
-                      permont: '/ Mont',
-                      loc: 'Seattle, Bogor', 
-                      rating: '5/5',
-                    ),
-
-                    const SizedBox(height: 30),
-                    
-                    CustomRecommendedSpace(
-                      imgurl: 'assets/image 13.png', 
-                      caption: 'Darrling How', 
-                      price: 20, 
-                      permont: '/ Mont',
-                      loc: 'Jakarta, Indonesia', 
-                      rating: '3/5',
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 30),
-
-              Container(
-                child: Row(
-                  children: [
-                    Text('Tips & Guidance')
-                  ],
-                ),
-              ),
              ],
            ),
           ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(
+            top: 30,
+            left: 24
+            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Recommended Space',
+                style: blacktextstyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: regular
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(
+            top: 16,
+            left: 24
+            ),
+          child: Column(
+            children: [
+              CustomRecommendedSpace(
+                imgurl: 'assets/kure.png', 
+                caption: 'Kuretakeso Hott', 
+                price: 52, 
+                permont: '/ Mont',
+                loc: 'Bandung, Germany', 
+                rating: '4/5',
+              ),
+
+            const SizedBox(height: 30),
+
+              CustomRecommendedSpace(
+                imgurl: 'assets/image 15.png', 
+                caption: 'Roemah Nenek', 
+                price: 11, 
+                permont: '/ Mont',
+                loc: 'Seattle, Bogor', 
+                rating: '5/5',
+              ),
+
+              const SizedBox(height: 30),
+              
+              CustomRecommendedSpace(
+                imgurl: 'assets/image 13.png', 
+                caption: 'Darrling How', 
+                price: 20, 
+                permont: '/ Mont',
+                loc: 'Jakarta, Indonesia', 
+                rating: '3/5',
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 30),
+
+        Container(
+          margin: EdgeInsets.only(
+            left: 24
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Tips & Guidance',
+                style: blacktextstyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: regular
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        
+        CustomTipsPage(
+          caption: 'City Guidelines', 
+          ket: 'Updated 20 Apr', 
+          img: 'assets/icon.png'
+        ),
+
+        const SizedBox(height: 20),
+
+        CustomTipsPage(
+          caption: 'Jakarta Fairship', 
+          ket: 'Updated 11 Dec', 
+          img: 'assets/icon2.png'
         ),
       ],
      ),
