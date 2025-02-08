@@ -1,3 +1,4 @@
+import 'package:cozyapps/UI/call_page.dart';
 import 'package:cozyapps/UI/home_page.dart';
 import 'package:cozyapps/UI/main_page.dart';
 import 'package:cozyapps/shared/theme.dart';
@@ -306,6 +307,12 @@ class DetailPage extends StatelessWidget{
                               judul: 'Book Now', 
                               onPressed: (){
                                 print('Book Now');
+                                Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (context)=> CallPage()
+                                  )
+                                );
                               },
                               width: 280,
                             ),
@@ -313,6 +320,7 @@ class DetailPage extends StatelessWidget{
                         ),
                       ),
                     ),
+                    
                   ],
                 ),
               ),

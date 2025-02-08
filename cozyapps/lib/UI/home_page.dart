@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
             top: 16,
             left: 24
             ),
-          child: Column(
+          child:const Column(
             children: [
               CustomRecommendedSpace(
                 imgurl: 'assets/kure.png', 
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                 rating: '4/5',
               ),
 
-            const SizedBox(height: 30),
+              SizedBox(height: 30),
 
               CustomRecommendedSpace(
                 imgurl: 'assets/image 15.png', 
